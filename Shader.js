@@ -1,4 +1,4 @@
-export class Engine {
+export class Shader {
 
     cursorX
     cursorY

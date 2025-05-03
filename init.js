@@ -1,7 +1,5 @@
-console.log("init")
+import { Engine } from "./Engine.js";
 
-const canvas = document.getElementById('glcanvas');
-const gl = canvas.getContext('webgl');
+const engine = new Engine();
 
-console.log("init")
-
+engine.init();
