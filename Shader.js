@@ -1,7 +1,6 @@
 export class Shader {
 
-    cursorX
-    cursorY
+    shader
 
     vertexShaderSource = `
         attribute vec2 aPosition;
@@ -16,16 +15,11 @@ export class Shader {
         }
     `;
         
-    constructor() {
-        this.cursorX = 0.0
-        this.cursorY = 0.0
-    }
-
-    createProgram(){
+    constructor(gl, type, source){
         
-    }
-
-    render(){
-
+        this.shader = gl.createShader(type);
+        gl.compileShader(shader);
+        var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+      
     }
 }
